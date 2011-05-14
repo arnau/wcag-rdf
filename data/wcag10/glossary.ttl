@@ -88,7 +88,7 @@ wcag10:content-developer
 wcag10:deprecated
   a skos:Concept ;
   rdfs:isDefinedBy <http://www.w3.org/TR/WCAG10/> ;
-  skos:prefLabel "Content developer"@en ;
+  skos:prefLabel "Deprecated"@en ;
   skos:definition """
     A deprecated element or attribute is one that has been outdated by newer constructs. Deprecated elements may become obsolete in future versions of HTML. [The index of HTML elements and attributes in the Techniques Document](http://www.w3.org/TR/WAI-WEBCONTENT-TECHS#html-index) indicates which elements and attributes are deprecated in HTML 4.0.
     
