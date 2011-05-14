@@ -33,21 +33,21 @@ wcag10:ascii-art
   rdfs:isDefinedBy <http://www.w3.org/TR/WCAG10/> ;
   skos:prefLabel "ASCII art"@en ;
   skos:definition """
-    ASCII art refers to text characters and symbols that are combined to create an image. For example ";-)" is the smiley emoticon. The following is an ascii figure showing the relationship between flash frequency and photoconvulsive response in patients with eyes open and closed [[skip over ascii figure](http://www.w3.org/TR/WCAG10/#authoring-tool) or consult a [description of chart](http://www.w3.org/TR/WCAG10/images/ascii-chart-longdesc.html)]:
-    
-      %   __ __ __ __ __ __ __ __ __ __ __ __ __ __   
-    100 |             *                             |
-     90 |                *  *                       |
-     80 |          *           *                    |
-     70 |             @           *                 |
-     60 |          @                 *              |
-     50 |       *        @              *           |
-     40 |                   @              *        |
-     30 |    *  @              @  @           *     |
-     20 |                                           |
-     10 |    @                       @  @  @  @     |
-          0  5 10 15 20 25 30 35 40 45 50 55 60 65 70
-          Flash frequency (Hertz)
+    ASCII art refers to text characters and symbols that are combined to create an image. For example `;-)` is the smiley emoticon. The following is an ascii figure showing the relationship between flash frequency and photoconvulsive response in patients with eyes open and closed [[skip over ascii figure](http://www.w3.org/TR/WCAG10/#authoring-tool) or consult a [description of chart](http://www.w3.org/TR/WCAG10/images/ascii-chart-longdesc.html)]:
+        
+          %   __ __ __ __ __ __ __ __ __ __ __ __ __ __   
+        100 |             *                             |
+         90 |                *  *                       |
+         80 |          *           *                    |
+         70 |             @           *                 |
+         60 |          @                 *              |
+         50 |       *        @              *           |
+         40 |                   @              *        |
+         30 |    *  @              @  @           *     |
+         20 |                                           |
+         10 |    @                       @  @  @  @     |
+              0  5 10 15 20 25 30 35 40 45 50 55 60 65 70
+              Flash frequency (Hertz)
   """@en ;
   .
 
