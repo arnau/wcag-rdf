@@ -1,0 +1,443 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix wcag10: <http://www.w3.org/TR/WCAG10/#> .
+
+wcag10:gl-provide-equivalents
+  dct:title "Proporcioneu alternatives equivalents al contingut visual i auditiu"@ca ;
+  dct:description "Proporcioneu un contingut que, presentat a l'usuari, compleixi essencialment la mateixa funció o el mateix propòsit que el contingut visual o auditiu."@ca ;
+  rdfs:comment """
+Si bé algunes persones no poden utilitzar directament imatges, pel·lícules, sons, miniaplicacions (applets), etc., sí que poden utilitzar pàgines que inclouen informació equivalent als continguts visuals o auditius. La informació equivalent ha de complir la mateixa finalitat. Així, un equivalent textual per a la imatge d'una fletxa ascendent que enllaci amb el sumari podria ser “Anar al sumari”. En alguns casos, un equivalent hauria de descriure l'aparença del contingut visual (per exemple, per a taules complexes, cartells o diagrames) o el so del contingut auditiu (com ara per als exemples sonors usats en educació).
+
+Aquesta directriu emfasitza la importància d'aportar [equivalents textuals](http://www.w3.org/2006/11/WCAG_ca/#text-equivalent) per als continguts no textuals (per exemple, imatges, so preenregistrat, vídeo, etc.). La importància dels equivalents textuals rau en la capacitat per a ser interpretats per vies accessibles a persones que formen part de diversos grups de discapacitat i que usen diverses tecnologies. El text pot ser interpretat per sintetitzadors de la veu o [terminals braille](http://www.w3.org/2006/11/WCAG_ca/#braille-display) i pot ser presentat visualment (en diverses grandàries) en pantalles d'ordinador i paper. El sintetitzador de la veu és essencial per a persones cegues i per a persones amb dificultats de lectura relacionades amb discapacitats cognitives, d'aprenentatge o sordesa. El braille és essencial per a persones que són alhora sordes i cegues així com per a moltes persones que solament són cegues. El text que es mostra visualment beneficia els usuaris amb sordesa així com la majoria d'usuaris del web.
+
+Proporcionar equivalents no textuals (per exemple, dibuixos, vídeos, so preenregistrat) del text és també beneficiós per a alguns usuaris, especialment per als analfabets o persones amb dificultat per a la lectura. En les pel·lícules o presentacions visuals l'acció representada, tal com el llenguatge corporal o altres indicacions visuals, podrien no estar acompanyades de suficient informació auditiva com per a transmetre la mateixa informació. Llevat que es proporcionin descripcions verbals d'aquesta informació visual, les persones que no puguin veure (o visualitzar) el contingut visual no podran percebre'l.
+  """@ca ;
+  .
+
+wcag10:tech-text-equivalent
+  dct:title "Proporcioneu un equivalent textual per a cada element no textual (per exemple, a través de l'atribut `@alt`, `@longdesc` o en el contingut de l'element). Això inclou: imatges, representacions gràfiques del text (incloent-hi els símbols), zones dels mapes d'imatge, animacions (per exemple, GIF animats), miniaplicacions (applets) i objectes programats, art ASCII, marcs, scripts, imatges usades com a vinyetes en les llistes, espaiadors, botons gràfics, sons (executats amb interacció de l'usuari o sense), arxius exclusivament auditius, peces sonores del vídeo i vídeos."@ca ;
+  dct:description """
+    Per exemple, en HTML:
+
+    * Utilitzeu `@alt` per als elments `img`, `input` i `applet` o proporcioneu un equivalent textual en el contingut dels elements `object` i `applet`.
+    * Per a continguts complexos (per exemple, un gràfic), en els quals el text de l'atribut `@alt` no ofereix un equivalent textual complet, proporcioneu una descripció addicional usant, per exemple, `@longdesc` amb `img` o `frame`, un enllaç dintre d'un element `object` o un [enllaç descriptiu](http://www.w3.org/2006/11/WCAG_ca/#d-link).
+    * Per a mapes d'imatge, utilitzeu l'atribut `@alt` amb `area` o l'element `map` amb elements `a` (i altre text) com a contingut.
+  """@ca ;
+  .
+
+wcag10:tech-redundant-server-links
+  dct:title "Proporcioneu enllaços textuals redundants per a cada zona activa d'un mapa d'imatge del costat del servidor."@ca ;
+  .
+
+wcag10:tech-auditory-descriptions
+  dct:title "[Fins que els agents d'usuari](http://www.w3.org/2006/11/WCAG_ca/#until-user-agents) no puguin llegir automàticament en veu alta l'equivalent textual d'un enregistrament visual, proporcioneu una descripció auditiva de la informació important de l'enregistrament visual d'una presentació multimèdia."@ca ;
+  .
+
+wcag10:tech-synchronize-equivalents
+  dct:title "Per a tota presentació multimèdia amb una seqüència temporal (per exemple, una pel·lícula o animació), sincronitzeu alternatives equivalents (per exemple, subtítols o descripcions auditives de la peça visual) amb la presentació."@ca ;
+  .
+
+wcag10:tech-redundant-client-links
+  dct:title "[Fins que els agents d'usuari](http://www.w3.org/2006/11/WCAG_ca/#until-user-agents) no reprodueixin els equivalents textuals dels enllaços dels mapes d'imatge del costat del client, proporcioneu enllaços en format text redundants per a cada zona activa d'un mapa d'imatge del costat del client."@ca ;
+  .
+
+wcag10:gl-color
+  dct:title "No us baseu sols en el color"@ca ;
+  dct:description "Assegureu-vos que els textos i gràfics són comprensibles quan es vegin sense color."@ca ;
+  rdfs:comment "Si únicament s'utilitza el color per a transmetre informació, les persones que no puguin diferenciar certs colors i els usuaris que no tinguin pantalles en color o utilitzin dispositius sense sortida visual no rebran la informació. Quan els colors de primer pla i de fons tenen un to massa similar poden no oferir suficient contrast en el moment de ser visualitzats en pantalles monocromàtiques o si les persones tenen diferents tipus de deficiències de percepció dels colors."@ca ;
+  .
+
+wcag10:tech-color-convey
+  dct:title "Assegureu-vos que tota la informació transmesa amb colors també estigui disponible sense color, per exemple mitjançant el context o per etiquetes de marcatge."@ca ;
+  .
+
+wcag10:tech-color-contrast
+  dct:title "Assegureu-vos que les combinacions dels colors de fons i primer pla tinguin suficient contrast perquè siguin percebudes per persones amb deficiències de percepció del color o es puguin visualitzar en pantalles en blanc i negre."@ca ;
+  .
+
+wcag10:gl-structure-presentation
+  dct:title "Utilitzeu etiquetes de marcatge i fulls d'estil i feu-ho de manera adient"@ca ;
+  dct:description "Marqueu els documents amb els elements estructurals adients. Controleu la presentació amb fulls d'estil en comptes de fer-ho amb elements i atributs de presentació."@ca ;
+  rdfs:comment """
+    Si s'usen etiquetes de marcatge de manera inapropiada (és a dir, sense seguir les especificacions), es dificulta l'accessibilitat. El mal ús de les etiquetes de marcatge per a un efecte de presentació (per exemple, utilitzant una taula per a la maquetació o una capçalera per a canviar la grandària del tipus de lletra) dificulta que els usuaris amb un programari especialitzat entenguin l'organització de la pàgina o hi naveguin. A més, utilitzar etiquetes de presentació en lloc d'etiquetes estructurals per a transmetre estructura (per exemple, construint el que sembla una taula de dades amb un element HTML `pre`), dificulta la interpretació de la pàgina de manera intel·ligible a altres dispositius (consulteu la [descripció de contingut, estructura i presentació del document](http://www.w3.org/2006/11/WCAG_ca/#content-structure)).
+
+    Els creadors de contingut poden tenir la temptació d'usar (o usar malament) construccions que assegurin el format desitjat en els navegadors antics. Han de ser conscients que aquesta mena de pràctiques causa problemes d'accessibilitat i han de considerar si el format és tan important com per fer el document inaccessible a alguns usuaris.
+
+    A l'altre extrem, els creadors de contingut no han de sacrificar l'etiqueta de marcatge adient perquè un determinat navegador o una ajuda tècnica concreta no pugui processar-lo correctament. Per exemple, és apropiat usar l'element `table` en HTML per a marcar [informació tabular](http://www.w3.org/2006/11/WCAG_ca/#tabular-information), encara que alguns lectors de pantalla antics no tractin correctament el text contigu (consulteu el [punt de verificació 10.3](http://www.w3.org/2006/11/WCAG_ca/#tech-linear-tables)). L'ús correcte de l'element `table` i la creació de taules que es converteixen amb facilitat a altres formats (consulteu la [directriu 5](http://www.w3.org/2006/11/WCAG_ca/#gl-table-markup)) fan possible que el programari interpreti les taules de manera diferent i no com a graelles en dues dimensions.
+  """@ca ;
+  .
+
+wcag10:tech-use-markup
+  dct:title "Per a transmetre informació, i sempre que sigui possible, utilitzeu un llenguatge d'etiquetatge adient en comptes d'imatges."@ca ;
+  dct:description "Per exemple, utilitzeu MathML per a marcar equacions matemàtiques i fulls d'estil per al format de text i el control de la maquetació. Igualment, eviteu la utilització d'imatges per a representar textos. Utilitzeu en el seu lloc text i fulls d'estil."@ca ;
+  .
+
+wcag10:tech-identify-grammar
+  dct:title "Creeu documents que estiguin validats per les gramàtiques formals publicades."@ca ;
+  dct:description "Per exemple, incloeu al començament del document una definició del tipus de document que faci referència a una DTD publicada (per exemple, la DTD HTML 4.0 estricta)."@ca ;
+  .
+
+wcag10:tech-style-sheets
+  dct:title "Utilitzeu fulls d'estil per a controlar la maquetació i la presentació."@ca ;
+  dct:description "Per exemple, utilitzeu la propietat `font` de CSS en lloc de l'element HTML `font` per a controlar l'estil dels tipus de lletra."@ca ;
+  .
+
+wcag10:tech-relative-units
+  dct:title "Utilitzeu unitats relatives en lloc d'absolutes en el moment d'especificar els valors dels atributs del llenguatge de marques i en els valors de les propietats dels fulls d'estil."@ca ;
+  dct:description "Per exemple, en CSS utilitzeu _em_ o mesures percentuals en comptes de _pt_ o _cm_, que són unitats absolutes. Si s'usen unitats absolutes, comproveu que el contingut presentat sigui utilitzable (consulteu l'[annex de validació](http://www.w3.org/2006/11/WCAG_ca/#validation))."@ca ;
+  .
+
+wcag10:tech-logical-headings
+  dct:title "Utilitzeu elements de capçalera per a transmetre l'estructura del document i useu-los d'acord amb l'especificació."@ca ;
+  dct:description "Per exemple, en HTML utilitzeu `h2` per a indicar una subsecció d'`h1`. No feu servir elements de capçalera per a aconseguir efectes tipogràfics."@ca ;
+  .
+
+wcag10:tech-list-structure
+  dct:title "Marqueu correctament les llistes i els seus elements."@ca ;
+  dct:description "Per exemple, en HTML jerarquitzeu els elements de llistes `ol`, `ul` i `dl` adequadament."@ca ;
+  .
+
+wcag10:tech-quotes
+  dct:title "Marqueu les citacions. No utilitzeu el marcatge de citacions per a efectes de format com ara els sagnats."@ca ;
+  dct:description "Per exemple, en HTML utilitzeu els elements `q` i `blockquote` per a marcar citacions curtes i llargues respectivament."@ca ;
+  .
+
+wcag10:gl-abbreviated-and-foreign
+  dct:title "Identifiqueu el llenguatge natural usat"@ca ;
+  dct:description "Utilitzeu etiquetes de marcatge que facilitin la pronunciació o interpretació de text abreujat o estranger."@ca ;
+  rdfs:comment """
+    Quan els creadors de contingut especifiquen els canvis en el llenguatge natural d'un document, els sintetitzadors de la veu i els terminals braille poden canviar automàticament al nou llenguatge, i així el document és més accessible a usuaris multilingües. Els creadors de contingut haurien d'identificar el llenguatge natural predominant del contingut d'un document (a través d'etiquetes de marcatge o capçaleres HTTP). També haurien de proporcionar el desenvolupament de les abreviatures i els acrònims.
+
+    A més de millorar les ajudes tècniques, les etiquetes de marcatge de llenguatge natural permeten als motors de cerca localitzar les paraules clau i identificar els documents en l'idioma desitjat. També milloren la llegibilitat del web per a totes les persones, fins i tot per a aquelles amb discapacitats d'aprenentatge, amb discapacitats cognitives o amb sordesa.
+
+    Quan els canvis en les abreviatures i el llenguatge natural no s'identifiquen, aquests poden ser indesxifrables per als dispositius de veu i braille.
+  """@ca ;
+  .
+
+wcag10:tech-identify-changes
+  dct:title "Identifiqueu de manera clara els canvis en el llenguatge natural del text del document i en qualsevol equivalent textual (per exemple, als subtítols)."@ca ;
+  dct:description "Per exemple, en HTML utilitzeu l'atribut `@lang`. En XML utilitzeu `@xml:lang`."@ca ;
+  .
+
+wcag10:tech-expand-abbr
+  dct:title "Especifiqueu la forma desenvolupada de cada abreviatura o acrònim quan apareguin per primera vegada en el document."@ca ;
+  dct:description "Per exemple, en HTML utilitzeu l'atribut `@title` dels elements `abbr` i `acronym`. Proporcionar la forma desenvolupada en el cos principal del document també ajuda a la utilització del document."@ca ;
+  .
+
+wcag10:tech-identify-lang
+  dct:title "Identifiqueu el llenguatge natural principal d'un document."@ca ;
+  dct:description "Per exemple, en HTML col·loqueu l'atribut `@lang` en l'element HTML. En XML utilitzeu `@xml:lang`. Els operadors de servidors haurien de configurar els seus servidors per a aprofitar els mecanismes de negociació de contingut del protocol HTTP ([RFC2068](http://www.ietf.org/rfc/rfc2068.txt) secció 14.13) de manera que els clients puguin recuperar automàticament els documents en l'idioma seleccionat."@ca ;
+  .
+
+wcag10:gl-table-markup
+  dct:title "Creeu taules que es transformin correctament"@ca ;
+  dct:description "Assegureu-vos que les taules tenen el marcatge necessari per a facilitar-ne la conversió per navegadors accessibles i altres agents d'usuari."@ca ;
+  rdfs:comment """
+    Les taules haurien d'utilitzar-se solament per a marcar la [informació tabular](http://www.w3.org/2006/11/WCAG_ca/#tabular-information) ("taules de dades"). Els creadors de contingut haurien d'evitar usar-les per a la maquetació de pàgines ("taules de maquetació"). Les taules per a qualsevol ús presenten també especials dificultats per als usuaris de [lectors de pantalla](http://www.w3.org/2006/11/WCAG_ca/#screen-reader) (consulteu [punt de verificació 10.3](http://www.w3.org/2006/11/WCAG_ca/#tech-linear-tables)).
+    
+    Alguns [agents d'usuari](http://www.w3.org/2006/11/WCAG_ca/#user-agent) permeten als usuaris navegar entre les cel·les de les taules i accedir a la capçalera i altres informacions de les cel·les. Tret que les taules estiguin marcades correctament, no proporcionaran als agents d'usuari la informació necessària ([consulteu també la directriu 3](http://www.w3.org/2006/11/WCAG_ca/#gl-structure-presentation)).
+    
+    Els punts de verificació següents beneficiaran directament les persones que accedeixin a una taula per mitjans auditius (per exemple, un lector de pantalla o un ordinador de cotxe) o aquelles que sols visualitzen una part de la pàgina cada vegada (per exemple, els usuaris cecs o d'escassa visió que utilitzin un sistema auditiu o un [terminal braille](http://www.w3.org/2006/11/WCAG_ca/#braille-display) o altres usuaris de dispositius amb pantalles petites, etc.).
+  """@ca ;
+  .
+
+wcag10:tech-table-headers
+  dct:title "En les taules de dades identifiqueu les capçaleres de fila i columna."@ca ;
+  dct:description "Per exemple, en HTML utilitzeu `td` per a identificar les cel·les de dades i `th` per a les capçaleres."@ca ;
+  .
+
+wcag10:tech-table-structure
+  dct:title "Per a les taules de dades que tenen dos nivells lògics o més de capçaleres de fila o columna, utilitzeu etiquetes de marcatge per a associar les cel·les de dades i les cel·les de capçalera."@ca ;
+  dct:description "Per exemple, en HTML utilitzeu `thead`, `tfoot` i `tbody` per a agrupar les files, `col` i `colgroup` per a agrupar les columnes i els atributs `@axis`, `@scope` i `@headers` per a descriure relacions més complexes entre les dades."@ca ;
+  .
+
+wcag10:tech-avoid-table-for-layout
+  dct:title "No utilitzeu taules per a la maquetació llevat que la taula tingui sentit quan es linealitzi. D'altra banda, si la taula no té sentit proporcioneu una alternativa equivalent (la qual pot ser una taula linealitzada )."@ca ;
+  rdfs:comment "[Quan els agents d'usuari](http://www.w3.org/2006/11/WCAG_ca/#until-user-agents) permetin l'ús del posicionament mitjançant fulls d'estil, les taules no s'haurien d'utilitzar per a la maquetació."@ca ;
+  .
+
+wcag10:tech-table-layout
+  dct:title "Si s'empra una taula per a la maquetació, no utilitzeu elements estructurals per a representar un format visual."@ca ;
+  dct:description "Per exemple, en HTML no utilitzeu l'element `th` per a fer que el contingut d'una cel·la (que no sigui capçalera de taula) es visualitzi centrat i en negreta."@ca ;
+  .
+
+wcag10:tech-table-summaries
+  dct:title "Proporcioneu resums de les taules."@ca ;
+  dct:description "Per exemple, en HTML utilitzeu l'atribut `@summary` de l'element `table`."@ca ;
+  .
+
+wcag10:tech-abbreviate-labels
+  dct:title "Proporcioneu abreviatures per a les etiquetes de capçalera."@ca ;
+  dct:description "Per exemple, en HTML utilitzeu l'atribut `@abbr` en l'element `th`."@ca ;
+  .
+
+
+wcag10:gl-new-technologies
+  dct:title "Assegureu-vos que les pàgines que incorporen noves tecnologies es transformen correctament"@ca ;
+  dct:description "Assegureu-vos que les pàgines són accessibles fins i tot quan no permeten la utilització de les tecnologies més modernes o aquestes estiguin deshabilitades."@ca ;
+  rdfs:comment "Si bé s'encoratja els creadors de contingut a utilitzar noves tecnologies que superin els problemes que comporten les tecnologies existents, haurien de fer-ho de manera que les seves pàgines funcionin tant amb navegadors més antics com amb navegadors actuals amb algunes característiques deshabilitades voluntàriament."@ca ;
+  .
+
+wcag10:tech-order-style-sheets
+  dct:title "Organitzeu els documents de manera que es puguin llegir sense fulls d'estil. Per exemple, quan un document HTML és interpretat sense associar-lo a un full d'estil s'ha de poder llegir."@ca ;
+  dct:description "Quan el contingut està organitzat d'una manera lògica, serà interpretat amb claredat fins i tot quan els fulls d'estil estiguin deshabilitats o no funcionin."@ca ;
+  .
+
+wcag10:tech-dynamic-source
+  dct:title "Assegureu-vos que els equivalents d'un contingut dinàmic s'actualitzen quan canvia el contingut dinàmic."@ca ;
+  .
+
+wcag10:tech-scripts
+  dct:title "Assegureu-vos que les pàgines són utilitzables quan es deshabilitin o no es doni suport als scripts, a les miniaplicacions (applets) o a altres objectes de programació. Si això no és possible, proporcioneu informació equivalent en una pàgina alternativa que sigui accessible."@ca ;
+  dct:description "Per exemple, assegureu-vos que els enllaços que activen scripts funcionen encara que aquests estiguin deshabilitats o no es puguin emprar (per exemple, no utilitzeu un `javascript:` com a objectiu d'un enllaç). Si no és possible fer la pàgina utilitzable sense scripts, proporcioneu un equivalent textual amb l'element `noscript`, utilitzeu un script del costat del servidor en lloc d'un script del costat del client, o bé proporcioneu una pàgina alternativa accessible com en el [punt de verificació 11.4](http://www.w3.org/2006/11/WCAG_ca/#tech-alt-pages). Consulteu també la [directriu 1](http://www.w3.org/2006/11/WCAG_ca/#gl-provide-equivalents)."@ca ;
+  .
+
+wcag10:tech-keyboard-operable-scripts
+  dct:title "Per als scripts i les miniaplicacions (applets) assegureu-vos que els controladors d'esdeveniments siguin independents dels dispositius d'entrada."@ca ;
+  dct:description "Consulteu la definició d'[independència del dispositiu](http://www.w3.org/2006/11/WCAG_ca/#device-independent)."@ca ;
+  .
+
+wcag10:tech-fallback-page
+  dct:title "Assegureu-vos que els continguts dinàmics siguin accessibles o proporcioneu una pàgina o presentació alternativa."@ca ;
+  dct:description "Per exemple, en HTML utilitzeu `noframes` al final de cada conjunt de marcs. Per a algunes aplicacions els scripts del costat del servidor poden ser més accessibles que els del costat del client."@ca ;
+  .
+
+wcag10:gl-movement
+  dct:title "Assegureu-vos que l'usuari pugui controlar els canvis dels continguts amb seqüència temporal"@ca ;
+  dct:description "Assegureu-vos que els objectes o les pàgines que es mouen, parpellegen, es desplacen o s'actualitzen automàticament puguin ser aturats momentàniament o definitivament."@ca ;
+  rdfs:comment "Algunes persones amb discapacitats cognitives o visuals no poden llegir textos que es mouen o no poden fer-ho amb prou rapidesa. El moviment també pot distreure de tal manera que la resta de la pàgina es torni il·legible per a les persones amb discapacitats cognitives. Els [lectors de pantalla](http://www.w3.org/2006/11/WCAG_ca/#screen-reader) són incapaços de llegir textos mòbils. Les persones amb discapacitats físiques podrien no ser capaces de moure's amb la suficient rapidesa o precisió per a interactuar amb objectes mòbils."@ca ;
+  .
+
+wcag10:tech-avoid-flicker
+  dct:title "[Fins que els agents d'usuari](http://www.w3.org/2006/11/WCAG_ca/#until-user-agents) no permetin als usuaris controlar els parpelleigs, eviteu fer que la pantalla parpellegi."@ca ;
+  rdfs:comment "Els usuaris amb epilèpsia fotosensible poden tenir atacs desencadenats per parpelleigs o centelleigs que oscil·lin entre els 4 i els 59 parpelleigs per segon (hertz) amb un nivell màxim de 20 parpelleigs per segon, així com amb els canvis ràpids de foscor a il·luminació (com ara els llums estroboscòpics)."@ca ;
+  .
+
+wcag10:tech-avoid-blinking
+  dct:title "[Fins que els agents d'usuari](http://www.w3.org/2006/11/WCAG_ca/#until-user-agents) no permetin als usuaris controlar els parpelleigs, eviteu fer que el contingut parpellegi (per exemple, canvi de presentació en períodes regulars, com ara les accions d'encendre i apagar)."@ca ;
+  .
+
+wcag10:tech-avoid-movement
+  dct:title "[Fins que els agents d'usuari](http://www.w3.org/2006/11/WCAG_ca/#until-user-agents) no permetin als usuaris congelar el contingut mòbil, eviteu els moviments en les pàgines."@ca ;
+  dct:description "Quan una pàgina inclou contingut mòbil, proporcioneu un mecanisme dintre d'un script o una miniaplicació (applet) que permeti als usuaris congelar el moviment o l'actualització. L'ús dels fulls d'estil amb scripts que creïn moviment permet als usuaris deshabilitar o obviar l'efecte més fàcilment."@ca ;
+  .
+
+wcag10:tech-no-periodic-refresh
+  dct:title "[Fins que els agents d'usuari](http://www.w3.org/2006/11/WCAG_ca/#until-user-agents) no proporcionin la possibilitat d'aturar les actualitzacions no creeu pàgines que s'actualitzin automàticament de manera periòdica."@ca ;
+  dct:description "Per exemple, en HTML no creeu pàgines que s'actualitzin automàticament amb `HTTP EQUIV=refresh` fins que els agents d'usuari no permetin deshabilitar aquesta característica."@ca ;
+  .
+
+wcag10:tech-no-auto-forward
+  dct:title "[Fins que els agents d'usuari](http://www.w3.org/2006/11/WCAG_ca/#until-user-agents) no proporcionin la possibilitat d'aturar el redireccionament automàtic, no utilitzeu etiquetes de marcatge per a redireccionar les pàgines automàticament. En el seu lloc, configureu el servidor perquè gestioni els redireccionamets."@ca ;
+  .
+
+wcag10:gl-own-interface
+  dct:title "Proporcioneu l'accessibilitat directa de les interfícies d'usuari incrustades"@ca ;
+  dct:description "Assegureu-vos que la interfície d'usuari segueix els principis d'un disseny accessible: accés a les funcionalitats amb independència del dispositiu, operativitat del teclat, veu automàtica, etc."@ca ;
+  rdfs:comment """Quan un objecte incrustat té la seva "pròpia interfície", aquesta (igual que la interfície del navegador) ha de ser accessible. Si la interfície de l'objecte incrustat no es pot fer accessible, s'ha de proporcionar una solució alternativa que sigui accessible."""@ca ;
+  .
+
+wcag10:tech-directly-accessible
+  dct:title "Feu els elements de programació, com ara scripts i miniaplicacions (applets), directament accessibles o compatibles amb les ajudes tècniques."@ca ;
+  .
+
+wcag10:gl-device-independence
+  dct:title "Dissenyeu tenint en compte la independència del dispositiu"@ca ;
+  dct:description "Utilitzeu característiques que permetin l'activació dels elements de la pàgina mitjançant diversos dispositius d'entrada."@ca ;
+  rdfs:comment "L'accés amb [independència del dispositiu](http://www.w3.org/2006/11/WCAG_ca/#device-independent) significa que l'usuari pot interactuar amb l'agent d'usuari o el document amb el dispositiu d'entrada (o de sortida) preferit (ratolí, teclat, veu, alicorn, etc.). Si, per exemple, un control de formulari només pot ser activat amb un ratolí o un altre dispositiu apuntador, algú que utilitzi la pàgina sense veure-la, amb entrada de veu o amb un teclat, o qui utilitzi un altre dispositiu d'entrada que no sigui apuntador, no podrà utilitzar el formulari."@ca ;
+  .
+
+wcag10:tech-client-side-maps
+  dct:title "Proporcioneu mapes d'imatge del costat del client en lloc de mapes d'imatge del costat del servidor, excepte en el cas que les zones no es puguin definir amb una forma geomètrica disponible."@ca ;
+  .
+
+wcag10:tech-keyboard-operable
+  dct:title "Assegureu-vos que qualsevol element que tingui la seva pròpia interfície es pugui manejar amb independència del dispositiu."@ca ;
+  dct:description "Consulteu la definició d'[independència de dispositiu](http://www.w3.org/2006/11/WCAG_ca/#device-independent)."@ca ;
+  .
+
+wcag10:tech-device-independent-events
+  dct:title "Per als scripts, especifiqueu controladors d'esdeveniments lògics en lloc de controladors d'esdeveniments dependents dels dispositius."@ca ;
+  .
+
+wcag10:tech-tab-order
+  dct:title "Creeu un ordre lògic per a navegar amb el tabulador a través dels enllaços, controls de formulari i objectes."@ca ;
+  dct:description "Per exemple, en HTML, especifiqueu l'ordre de navegació amb els tabuladors utilitzant l'atribut `@tabindex` o bé garantiu un disseny de pàgina lògic."@ca ;
+  .
+
+wcag10:tech-keyboard-shortcuts
+  dct:title "Proporcioneu dreceres de teclat per als enllaços més importants (inclosos els dels [mapes d'imatge del costat del client](http://www.w3.org/2006/11/WCAG_ca/#client-side-map)), els controls de formulari i els grups de controls de formulari."@ca ;
+  dct:description "Per exemple, en HTML, especifiqueu les dreceres de teclat mitjançant l'atribut `@accesskey`."@ca ;
+  .
+
+wcag10:gl-interim-accessibility
+  dct:title "Utilitzeu solucions provisionals"@ca ;
+  dct:description "Utilitzeu solucions provisionals d'accessibilitat per tal que les ajudes tècniques i els navegadors antics operin correctament."@ca ;
+  rdfs:comment "Per exemple, els navegadors antics no permeten als usuaris navegar per quadres d'edició buits. Els antics lectors de pantalla llegeixen llistes d'enllaços consecutius com un únic enllaç. Aquests elements actius tenen com a resultat un accés difícil o impossible. Igualment, canviar la finestra actual o fer aparèixer noves finestres pot ser molt desorientador per als usuaris que no veuen el que està passant."@ca ;
+  .
+
+wcag10:tech-avoid-pop-ups
+  dct:title "[Fins que els agents d'usuari](http://www.w3.org/2006/11/WCAG_ca/#until-user-agents) no permetin deshabilitar l'obertura de noves finestres, no provoqueu l'obertura d'altres finestres i no canvieu la finestra actual sense informar-ne l'usuari."@ca ;
+  dct:description "Per exemple, en HTML, eviteu utilitzar un marc que tingui com a destí una nova finestra."@ca ;
+  .
+
+wcag10:tech-unassociated-labels
+  dct:title "[Fins que els agents d'usuari](http://www.w3.org/2006/11/WCAG_ca/#until-user-agents) no permetin de manera explícita associacions entre etiquetes i controls de formulari, per a tots els controls de formulari amb etiquetes associades de manera implícita, assegureu-vos que l'etiqueta està col·locada correctament."@ca ;
+  dct:description "L'etiqueta ha de precedir de manera immediata el control a la mateixa línia (es permet més d'una etiqueta/control per línia) o estar en la línia que precedeix el control (amb només una etiqueta i un control per línia)."@ca ;
+  .
+
+wcag10:tech-linear-tables
+  dct:title "[Fins que els agents d'usuari](http://www.w3.org/2006/11/WCAG_ca/#until-user-agents) (incloent-hi les ajudes tècniques) interpretin correctament els textos contigus, proporcioneu un text lineal alternatiu (a la mateixa pàgina o en una altra) per a totes les taules que maqueten el text en paral·lel o en columnes."@ca ;
+  rdfs:comment "Si us plau, consulteu la definició de [taula linealitzada](http://www.w3.org/2006/11/WCAG_ca/#linearized-table). Aquest punt de verificació beneficia aquelles persones amb [agents d'usuari](http://www.w3.org/2006/11/WCAG_ca/#user-agent) (com poden ser alguns lectors de pantalla) que són incapaços de manejar blocs de text presentats de manera contigua; el punt de verificació no pretén desincentivar l'ús de taules per a presentar [informació tabular](http://www.w3.org/2006/11/WCAG_ca/#tabular-information)."@ca ;
+  .
+
+wcag10:tech-place-holders
+  dct:title "[Fins que els agents d'usuari](http://www.w3.org/2006/11/WCAG_ca/#until-user-agents) no manegin correctament els controls buits, incloeu caràcters per defecte en els quadres d'edició i àrees de text."@ca ;
+  dct:description "Per exemple, en HTML, feu-ho amb `textarea` i `input`."@ca ;
+  .
+
+wcag10:tech-divide-links
+  dct:title "[Fins que els agents d'usuari](http://www.w3.org/2006/11/WCAG_ca/#until-user-agents) (incloent-hi les ajudes tècniques) no interpretin de manera separada els enllaços adjacents, incloeu caràcters imprimibles (rodejats d'espais), sense funció d'enllaç, entre els enllaços adjacents."@ca ;
+  .
+
+wcag10:gl-use-w3c
+  dct:title "Utilitzeu les tecnologies i directrius W3C"@ca ;
+  dct:description "Utilitzeu les tecnologies W3C (d'acord amb les especificacions) i seguiu les directrius d'accessibilitat. Allà on no sigui possible utilitzar la tecnologia del W3C, o si en utilitzar-la s'obtenen com a resultat materials de difícil conversió, proporcioneu una versió alternativa del contingut que sigui accessible."@ca ;
+  rdfs:comment """
+    Les directrius actuals recomanen tecnologies W3C (per exemple HTML, CSS, etc.) per diverses raons:
+
+    * Les tecnologies W3C inclouen característiques d'accessibilitat "incorporades".
+    * Les especificacions W3C es revisen des de bon principi per a assegurar que els temes d'accessibilitat es tenen en compte durant la fase de disseny.
+    * Les especificacions W3C són desenvolupades en un procés obert de consens a la indústria.
+
+    Molts formats que no són del W3C (per exemple: PDF, Shockwave, etc.) requereixen ser visualitzats per connectors o aplicacions autònomes. Sovint, aquests formats no es poden visualitzar o no són navegables amb [agents d'usuari](http://www.w3.org/2006/11/WCAG_ca/#user-agent) estàndards (incloent-hi [ajudes tècniques](http://www.w3.org/2006/11/WCAG_ca/#assistive-tech)). Evitar l'ús de funcionalitats no estandaritzades o que no ha especificat el W3C (elements, atributs, propietats i extensions propietaries) crearà pàgines més accessibles per a més persones que utilitzin una varietat més àmplia de maquinari i programari. Quan s'hagin d'utilitzar les tecnologies inaccessibles (propietàries o no), caldrà proporcionar pàgines equivalents accessibles.
+
+    Fins i tot quan s'emprin tecnologies W3C, han de ser utilitzades d'acord amb les directrius d'accessibilitat. Quan useu noves tecnologies, assegureu-vos que siguin de fàcil conversió ([vegeu també la directriu 6](http://www.w3.org/2006/11/WCAG_ca/#gl-new-technologies)).
+  """@ca ;
+  .
+
+wcag10:tech-latest-w3c-specs
+  dct:title "Utilitzeu tecnologies W3C quan estiguin disponibles i siguin adients per a una feina i empreu les darreres versions quan en quedi garantit el funcionament."@ca ;
+  dct:description "Consulteu la [llista de referències](http://www.w3.org/2006/11/WCAG_ca/#References) per a obtenir informació sobre les darreres especificacions W3C [[WAI-UA-SUPPORT]](http://www.w3.org/2006/11/WCAG_ca/#ref-WAI-UA-SUPPORT) i per a obtenir informació sobre els agents d'usuari que donen suport a les tecnologies W3C."@ca ;
+  .
+
+wcag10:tech-avoid-deprecated
+  dct:title "Eviteu característiques desfasades de les tecnologies W3C."@ca ;
+  dct:description "Per exemple, en HTML, no utilitzeu l'element [desfasat](http://www.w3.org/2006/11/WCAG_ca/#deprecated) `font`; utilitzeu en lloc seu fulls d'estil (per exemple, la propietat `font` en CSS)."@ca ;
+  .
+
+wcag10:tech-content-preferences
+  dct:title "Proporcioneu la informació de manera que els usuaris puguin rebre els documents d'acord amb les seves preferències (per exemple, idioma, tipus de contingut, etc.)."@ca ;
+  rdfs:comment "Utilitzeu la negociació del contingut allà on sigui possible."@ca ;
+  .
+
+wcag10:tech-alt-pages
+  dct:title "Si després de grans esforços no podeu crear una pàgina accessible, proporcioneu un enllaç a una pàgina que utilitzi les tecnologies W3C, que sigui accessible, que tingui informació (o funcionalitat) equivalent, i que sigui actualitzada tan sovint com la pàgina (original) inaccessible."@ca ;
+  .
+
+wcag10:gl-complex-elements
+  dct:title "Proporcioneu informació de context i orientació"@ca ;
+  dct:description "Proporcioneu informació de context i d'orientació per a ajudar els usuaris a entendre pàgines o elements complexos."@ca ;
+  rdfs:comment "Agrupar els elements i proporcionar informació contextual sobre les relacions entre els elements pot resultar útil a tots els usuaris. Les relacions complexes entre parts d'una pàgina poden ser difícils d'interpretar per persones amb discapacitats cognitives o visuals."@ca ;
+  .
+
+wcag10:tech-frame-titles
+  dct:title "Poseu un títol a cada marc per a facilitar-ne la identificació i navegació."@ca ;
+  dct:description "Per exemple, en HTML, utilitzeu l'atribut `@title` en els elements `frame`."@ca ;
+  .
+
+wcag10:tech-frame-longdesc
+  dct:title "Descriviu el propòsit dels marcs i com es relacionen entre si, si no resulta obvi únicament amb els títols dels marcs."@ca ;
+  dct:description "Per exemple, en HTML, utilitzeu `@longdesc` o un [enllaç descriptiu](http://www.w3.org/2006/11/WCAG_ca/#d-link)."@ca ;
+  .
+
+wcag10:tech-group-information
+  dct:title "Dividiu els blocs llargs d'informació en grups més manejables quan fer-ho sigui natural i adient."@ca ;
+  dct:description "Per exemple, en HTML, utilitzeu `optgroup` per a agrupar els elements `option` dins d'un `select`, agrupeu controls de formulari amb `fieldset` i `legend`, utilitzeu llistes imbricades quan sigui adient, useu capçaleres per a estructurar documents, etc."@ca ;
+  .
+
+wcag10:tech-associate-labels
+  dct:title "Associeu de manera explícita les etiquetes amb els seus controls."@ca ;
+  dct:description "Per exemple, en HTML, utilitzeu `label` i el seu atribut `@for`."@ca ;
+  .
+
+wcag10:gl-facilitate-navigation
+  dct:title "Proporcioneu mecanismes clars de navegació"@ca ;
+  dct:description "Proporcioneu mecanismes clars i consistents de navegació (informació d'orientació, barres de navegació, mapa del web, etc.) per a incrementar la probabilitat que una persona trobi allò que està buscant en un lloc web."@ca ;
+  rdfs:comment "Els [mecanismes de navegació](http://www.w3.org/2006/11/WCAG_ca/#nav-mechanism) clars i consistents són importants per a les persones amb discapacitats cognitives o ceguesa, i beneficien tots els usuaris."@ca ;
+  .
+
+wcag10:tech-meaningful-links
+  dct:title "Identifiqueu clarament l'objectiu de cada enllaç."@ca ;
+  dct:description """
+    El [text d'enllaç](http://www.w3.org/2006/11/WCAG_ca/#link-text) ha de tenir sentit quan es llegeixi fora de context (per si mateix o com a part d'una seqüència d'enllaços). El text de l'enllaç també ha de ser curt.
+    
+    Per exemple, en HTML, escriviu “Informació sobre la versió 4.3” en lloc de “Cliqueu aquí”. A més d'un text clar d'enllaç, els creadors de contingut han d'aclarir l'objectiu d'un enllaç amb un títol informatiu (per exemple, en HTML, l'atribut `@title`).
+  """@ca ;
+  .
+
+wcag10:tech-use-metadata
+  dct:title "Proporcioneu metadades per a afegir informació semàntica a les pàgines i als llocs web."@ca ;
+  dct:description "Per exemple, utilitzeu RDF ([[RDF]](http://www.w3.org/2006/11/WCAG_ca/#ref-RDF)) per a indicar l'autor d'un document, el tipus de contingut, etc."@ca ;
+  rdfs:comment """Alguns [agents d'usuari](http://www.w3.org/2006/11/WCAG_ca/#user-agent) HTML poden construir eines de navegació a partir de les relacions entre documents descrites amb l'element HTML `link` i els atributs `@rel` o `@rev` (per exemple, `rel="next"`, `rel="previous"`, `rel="index"`, etc.)."""@ca ;
+  .
+
+wcag10:tech-site-description
+  dct:title "Proporcioneu informació sobre la disposició general d'un lloc web (per exemple, un mapa del web o un sumari)."@ca ;
+  dct:description "En descriure la disposició del lloc, destaqueu i expliqueu les característiques d'accessibilitat disponibles."@ca ;
+  .
+
+wcag10:tech-clear-nav-mechanism
+  dct:title "Utilitzeu els mecanismes de navegació de manera consistent."@ca ;
+  .
+
+wcag10:tech-nav-bar
+  dct:title "Proporcioneu barres de navegació per a destacar i donar accés als mecanismes de navegació."@ca ;
+  .
+
+wcag10:tech-group-links
+  dct:title "Agrupeu els enllaços relacionats, identifiqueu les agrupacions (per als agents d'usuari) i, fins que els agents d'usuari no ho facin, proporcioneu una manera de saltar-se una agrupació."@ca ;
+  .
+
+wcag10:tech-searches
+  dct:title "Si proporcioneu funcions de cerca, permeteu diferents tipus de cerca per a diferents nivells d'habilitat i per a preferències diverses."@ca ;
+  .
+
+wcag10:tech-front-loading
+  dct:title "Col·loqueu la informació destacada a l'inici de les capçaleres, els paràgrafs, les llistes, etc."@ca ;
+  rdfs:comment "Aquesta tècnica, en anglès normalment s'anomena _front-loading_ (“posar al davant”) i és especialment útil per a les persones que accedeixen a la informació amb dispositius en sèrie com són els sintetitzadors de la veu."@ca ;
+  .
+
+wcag10:tech-bundled-version
+  dct:title "Proporcioneu informació sobre les col·leccions de documents (com ara documents formats per diverses pàgines)."@ca ;
+  dct:description "Per exemple, en HTML, especifiqueu les col·leccions de documents amb l'element `link` i els atributs `@rel` i `@rev`. Un altre sistema per a crear una col·lecció és fer un arxiu (amb zip, tar i gzip, stuffit, etc.) que incorpori les diferents pàgines."@ca ;
+  rdfs:comment "Així permeteu una reducció de costos de navegació a les persones amb discapacitat que han de navegar lentament, i feu possible una navegació en mode desconnectat (no en línia)."@ca ;
+  .
+
+wcag10:tech-skip-over-ascii
+  dct:title "Proporcioneu un mitjà per a saltar-se un art ASCII de diverses línies."@ca ;
+  .
+
+wcag10:gl-facilitate-comprehension
+  dct:title "Assegureu-vos que els documents siguin clars i simples"@ca ;
+  dct:description "Assegureu-vos que els documents siguin clars i simples perquè puguin ser entesos amb facilitat."@ca ;
+  rdfs:comment """
+    Consistent page layout, recognizable graphics, and easy to understand language benefit all users. In particular, they help people with cognitive disabilities or who have difficulty reading. (However, ensure that images have text equivalents for people who are blind, have low vision, or for any user who cannot or has chosen not to view graphics. [Refer also to guideline 1](http://www.w3.org/TR/WCAG10/#gl-provide-equivalents).)
+    
+    Using clear and simple language promotes effective communication. Access to written information can be difficult for people who have cognitive or learning disabilities. Using clear and simple language also benefits people whose first language differs from your own, including those people who communicate primarily in sign language.
+  """@en ;
+  .
+
+wcag10:tech-simple-and-straightforward
+  dct:title "Utilitzeu el llenguatge apropiat de la manera més clara i senzilla, d'acord amb el contingut d'un lloc web."@ca ;
+  .
+
+wcag10:tech-icons
+  dct:title "Complementeu el text amb gràfics o presentacions auditives si facilita la comprensió de la pàgina."@ca ;
+  .
+
+wcag10:tech-consistent-style
+  dct:title "Creeu un estil de presentació que sigui consistent al llarg de les pàgines."@ca ;
+  .
