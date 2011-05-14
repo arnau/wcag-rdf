@@ -13,7 +13,6 @@ The content has been manipulated to fit the rules of [Markdown](http://daringfir
 
 ## To-Do
 
-* Describe the glossary with [SKOS](http://www.w3.org/TR/skos-reference/skos.html).
 * Describe each technique.
 * Describe the WCAG vocabulary with [OWL 2](http://www.w3.org/TR/owl2-overview/).
 
