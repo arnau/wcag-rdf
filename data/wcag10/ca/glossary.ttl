@@ -1,0 +1,239 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix wcag10: <http://www.w3.org/TR/WCAG10/#> .
+
+
+wcag10:accessible
+  skos:prefLabel "Accessible"@ca ;
+  skos:definition "Una informació és accessible quan pot ser consultada per una persona amb alguna discapacitat."@ca ;
+  .
+
+wcag10:applet
+  skos:definition "Programa inserit en una pàgina web."@ca ;
+  .
+
+wcag10:assistive-tech
+  skos:prefLabel "Ajuda tècnica"@ca ;
+  skos:definition "Maquinari o programari dissenyat especialment per a assistir persones amb discapacitats en l'acompliment de les activitats diàries. Aquesta tecnologia inclou cadires de rodes, lectors automàtics, aparells per a manipular objectes, etc. En l'entorn web les ajudes tècniques més usuals pel que fa al programari són lectors de pantalla, ampliadors de pantalla, sintetitzadors de veu i programes de reconeixement de la veu que funcionen juntament amb navegadors (entre d'altres agents d'usuari). Les ajudes tècniques relatives al maquinari inclouen teclats alternatius, dispositius apuntadors, etc."@ca ;
+  .
+
+wcag10:ascii-art
+  skos:prefLabel "Art ASCII"@ca ;
+  skos:definition """
+    Caràcters alfanumèrics i símbols que s'han combinat per a crear una imatge. Per exemple `;-)` és una emoticona per a indicar un somriure. A continuació es mostra un dibuix ASCII per a il·lustrar la relació entre la freqüència de parpelleigs i la resposta en pacients amb epilèpsia fotosensible ([salteu-vos la figura](http://www.w3.org/2006/11/WCAG_ca/#braille) o [llegiu la descripció](http://www.w3.org/2006/11/WCAG_ca/images/ascii-chart-longdesc.html)): 
+        
+          %   __ __ __ __ __ __ __ __ __ __ __ __ __ __   
+        100 |             *                             |
+         90 |                *  *                       |
+         80 |          *           *                    |
+         70 |             @           *                 |
+         60 |          @                 *              |
+         50 |       *        @              *           |
+         40 |                   @              *        |
+         30 |    *  @              @  @           *     |
+         20 |                                           |
+         10 |    @                       @  @  @  @     |
+              0  5 10 15 20 25 30 35 40 45 50 55 60 65 70
+              Flash frequency (Hertz)
+  """@ca ;
+  .
+
+wcag10:authoring-tool
+  skos:prefLabel "Eina d'autor"@ca ;
+  skos:definition "Com ara editors d'HTML, eines de conversió de documents, eines que generen contingut web a partir de bases de dades, etc. Per a informació sobre com crear eines d'autor accessibles, podeu consultar les directrius d'accessibilitat per a eines d'autor (vegeu [[WAI-AUTOOLS]](http://www.w3.org/2006/11/WCAG_ca/#ref-WAI-AUTOOLS))."@ca ;
+  .
+
+wcag10:backward-compatible
+  skos:prefLabel "Compatibilitat enrere"@ca ;
+  skos:definition "Disseny que funciona bé amb versions anteriors d'un llenguatge, programa, etc."@ca ;
+  .
+
+wcag10:braille
+  skos:prefLabel "Braille"@ca ;
+  skos:definition """
+    Sistema de lectura i d'escriptura que fa servir sis punts en relleu en diferents posicions per a representar les lletres i els números de manera que les persones cegues els puguin llegir amb els dits. A continuació es mostra la paraula accessible en braille:
+    
+    ![Accessible](http://www.w3.org/TR/WCAG10/images/access.gif)
+    
+    Els terminals braille dinàmics segueixen les instruccions d'un aparell electrònic, usualment un ordinador, i posen en relleu o graven uns punts per a crear línies de text. Actualment aquests aparells són d'entre 1 i 80 caràcters per línia, i els més habituals són de 12 a 20 caràcters per línia.
+  """@ca ;
+  .
+
+wcag10:content-developer
+  skos:prefLabel "Creador de contingut"@ca ;
+  skos:definition "Persona que és autora de pàgines web o dissenyadora de llocs web."@ca ;
+  .
+
+wcag10:deprecated
+  skos:prefLabel "Desfassat"@ca ;
+  skos:definition """
+    Dit dels elements o atributs desfasats que s'han eliminat en les noves versions d'un llenguatge. Els elements desfasats poden convertir-se en obsolets en versions futures d'HTML. L'[índex d'elements i atributs HTML del document de tècniques](http://www.w3.org/TR/WAI-WEBCONTENT-TECHS#html-index) indica quins elements i atributs han estat eliminats a la versió 4.0 d'HTML.
+    
+    Els autors haurien d'evitar l'ús d'aquests elements i atributs, però en canvi els agents d'usuari haurien de continuar reconeixent-los per motius de compatibilitat cap enrere.
+  """@ca ;
+  .
+
+wcag10:device-independent
+  skos:prefLabel "Independencia de dispositiu"@ca ;
+  skos:definition """
+    Els usuaris han de poder interaccionar amb un agent d'usuari (i amb el document visualitzat) usant els perifèrics d'entrada i sortida segons les seves preferències i necessitats. Els perifèrics d'entrada poden incloure dispositius apuntadors, teclats, terminals braille, alicorns, micròfons o altres. Els perifèrics de sortida poden ser monitors, sintetitzadors de la veu o dispositius braille.
+    
+    Cal remarcar que la independència del dispositiu no vol dir que l'agent d'usuari hagi de permetre l'ús de qualsevol perifèric d'entrada o sortida. Els agents d'usuari han de possibilitar mecanismes d'entrada i sortida per a cadascun dels perifèrics previstos, encara que siguin redundants. Per exemple, si un agent d'usuari preveu l'ús del ratolí i del teclat, els usuaris haurien de poder interactuar amb totes dues opcions, tant amb una com amb l'altra.
+  """@ca ;
+  .
+
+wcag10:content-structure
+  skos:prefLabel "Contingut, estructura i presentació del document"@ca ;
+  skos:definition """
+    El contingut d'un document es refereix a allò que diu a l'usuari amb text, imatges, sons, vídeos, animacions, etc. L'estructura és l'organització lògica (en capítols, amb una introducció i sumari, etc.). Un element (com ara, `p`, `strong`, `blockquote` en HTML) que especifica l'estructura del document s'anomena element estructural. La presentació del document és la manera com es visualitza (imprès, en una presentació gràfica bidimensional, en una presentació amb només text, amb veu sintetitzada, en braille, etc.). Un element que especifica la presentació del document (com pot ser `b`, `font`, `center`) s'anomena element de presentació. 
+    
+    Penseu, per exemple, en la capçalera d'un document. El contingut de la capçalera és allò que diu (per exemple, vaixells de vela). En HTML la capçalera és un element estructural marcat, per exemple, amb un element `h2`. Finalment, la presentació de la capçalera pot ser un text en negreta al marge, justificat, una línia de text centrada, un títol parlat amb un cert estil de veu (com si fos una font oral), etc.
+  """@ca ;
+  .
+
+wcag10:dhtml
+  skos:prefLabel "HTML dinàmic"@ca ;
+  skos:definition "Terme publicitari que s'aplica a un conjunt de normes que inclouen l'HTML, els fulls d'estil, el Model d'Objecte del Document [DOM1] i l'ús de scripts. No hi ha, però, cap especificació W3C que defineixi formalment l'HTML dinàmic . La majoria d'aquestes directrius són aplicables a pàgines que utilitzen HTML dinàmic, i en concret les directrius 1, 3, 5, 7 i 9 se centren en l'ús de scripts i de fulls d'estil."@ca ;
+  .
+
+wcag10:element
+  skos:prefLabel "Element"@ca ;
+  skos:definition """
+    En aquest document s'usa el terme element en el sentit estricte de construcció sintàctica, definit per SGML, i també en un sentit més ampli per a indicar un tipus de contingut (com per exemple vídeo o so) o una construcció lògica (com una llista o una capçalera). Gràcies a aquesta segona accepció, les directrius, inspirades en HTML, poden aplicar-se fàcilment a qualsevol altre llenguatge de marques.
+    
+    Cal remarcar que alguns elements (SGML) tenen contingut que es mostrarà directament (com pot ser `p`, `li`, `table` a HTML), uns altres seran reemplaçats per un contingut extern (com ara `img`) i altres indiquen com es processarà la informació (per exemple, `style` i `script` fan que processi la informacio un full d'estil o un programa, respectivament). Un element que genera caràcters de text que formaran part del document s'anomena element textual.
+  """@ca ;
+  .
+
+wcag10:equivalent
+  skos:prefLabel "Equivalent"@ca ;
+  skos:definition """
+    Dit de la informació que té el mateix objectiu i realitza la mateixa funció bàsica que una altra en mostrar-se a l'usuari. En el context d'aquestes directrius, la informació equivalent ha de realitzar la mateixa funció per a un usuari amb una discapacitat (o fins allà on sigui possible tenint en compte la natura de la discapacitat i l'estat de la tecnologia) que la que realitza la informació original per a una persona sense discapacitat. Per exemple, el text “lluna plena” pot aportar la mateixa informació que una imatge de la lluna plena quan es mostra a l'usuari. Cal remarcar que l'equivalència se centra a realitzar la mateixa funció. Si la imatge és part d'un enllaç i entendre-la és essencial per a saber a on ens portarà, la informació equivalent també ha de permetre conèixer el destí de l'enllaç. Proporcionar informació equivalent sobre continguts inaccessibles és un dels mecanismes principals de què disposen els autors per a fer que els seus documents siguin accessibles als usuaris amb discapacitats.
+    
+    Per a transmetre el mateix contingut, la informació equivalent a vegades haurà de fer una descripció de la informació original (com ara, explicar com es veu o com sona el contingut original). Per exemple: en un gràfic de dades complex els autors hauran de descriure'n les parts gràfiques. 
+    
+    La versatilitat del text per a ser mostrat de maneres diferents a l'usuari (veu sintetitzada, braille, lletres ampliades, etc.) fa que en aquestes directrius es demani l'ús d'equivalents textuals per a la informació gràfica i sonora del document. Els equivalents textuals s'han d'escriure de manera que aportin tota la informació rellevant. Els equivalents no textuals (per exemple, una descripció narrada d'una presentació visual, un vídeo amb llenguatge de signes per a persones sordes com a equivalent d'una història escrita, etc.) també milloren l'accessibilitat de les persones que no poden accedir a la informació gràfica o al text escrit, com per exemple persones amb problemes de visió, amb discapacitats cognitives, amb discapacitats d'aprenentatge o sordesa. 
+    
+    Hi ha diverses maneres d'incloure equivalents en els nostres documents: mitjançant l'ús d'atributs (per exemple `@alt` a HTML o SMIL); o com a part del contingut de l'element (per exemple a HTML en els elements `object`), o incloent-los en el cos del document, o bé mitjançant un document enllaçat (usant l'atribut `@longdesc` d'HTML o posant un enllaç descriptiu). Segons el grau de complexitat de l'equivalent, potser serà necessari combinar més d'una tècnica (per exemple, fer una descripció curta, útil per als lectors habituals, via l'atribut `@alt` i completar-la amb una descripció més detallada enllaçada amb `@longdesc` per als lectors novells). En el document de “Tècniques” [[TECHNIQUES]](http://www.w3.org/2006/11/WCAG_ca/#ref-TECHNIQUES) es descriu detalladament com i quan proveir informació equivalent. 
+    
+    Una transcripció textual és un equivalent textual a un enregistrament sonor que inclou un discurs parlat i sons no vocals, com per exemple efectes especials. Un subtítol és una transcripció textual d'un enregistrament sonor o d'un vídeo que està sincronitzada amb l'enregistrament. El subtítol se sol presentar escrit sobre la imatge del vídeo i beneficia la gent amb sordesa o dificultats d'oïda, o qualsevol persona que no pot sentir el so (per exemple, en una habitació molt plena de gent). Una transcripció textual combinada combina els subtítols amb una descripció de les escenes (de les accions, del llenguatge gestual, dels gràfics, dels canvis d'escena, etc.). Aquests equivalents textuals fan accessible la presentació a les persones sordcegues i a les que no poden veure bé les imatges en moviment. També la fan accessible als cercadors. 
+    
+    Un exemple d'un equivalent no textual és una descripció auditiva dels elements clau d'una presentació. La descripció pot fer-se en veu pregravada o sintetitzada (gravada o generada en el mateix moment). La descripció auditiva se sincronitza amb la banda sonora de la presentació, aprofitant les pauses naturals d'aquesta. La descripció auditiva inclou informació sobre accions, llenguatge gestual, gràfics i canvis d'escena.
+  """@ca ;
+  .
+
+wcag10:image
+  skos:prefLabel "Imatge"@ca ;
+  skos:definition "Presentació gràfica."@ca ;
+  .
+
+wcag10:image-map
+  skos:prefLabel "Mapa d'imatge"@ca ;
+  skos:definition """
+    Imatge que es divideix en zones amb una acció associada. Clicant en una zona activa l'acció associada s'executa. 
+    
+    Quan l'usuari clica en una zona activa d'un mapa d'imatge del costat del client, l'agent d'usuari calcula la zona on s'ha produït el clic i activa l'enllaç que hi està associat. Quan l'usuari clica en una zona activa d'un mapa d'imatge del costat del servidor, les coordenades del clic s'envien al servidor, i és aquest el que executa l'acció associada.
+    
+    Els creadors de contingut poden fer accessibles els mapes d'imatge del costat del client proveint un accés independent del dispositiu als enllaços del mapa d'imatge. Quan els mapes d'imatge són al costat del client l'agent d'usuari pot informar immediatament sobre si el punter de l'usuari es troba sobre una zona activa.
+  """@ca ;
+  .
+
+wcag10:important
+  skos:prefLabel "Important"@ca ;
+  skos:definition "Dit de la informació en un document que cal entendre per a comprendre el document."@ca ;
+  .
+
+wcag10:linearized-table
+  skos:prefLabel "Taula linearitzada"@ca ;
+  skos:definition "Representació d'una taula en què els continguts de les cel.les es converteixen en paràgrafs que es presenten de manera seqüencial. Les cel·les de les taules haurien de tenir sentit si es llegeixen en ordre, ja que els paràgrafs mantindran l'ordre de les cel·les originals, i haurien d'incloure [elements estructurals](http://www.w3.org/2006/11/WCAG_ca/#structural-element) (per a crear paràgrafs, capçaleres, llistes, etc.) per tal que la taula tingui sentit un cop transcrita."@ca ;
+  .
+
+wcag10:link-text
+  skos:prefLabel "Text d'enllaç"@ca ;
+  skos:definition "Contingut textual visible d'un enllaç."@ca ;
+  .
+
+wcag10:natural-language
+  skos:prefLabel "Llenguatge natural"@ca ;
+  skos:definition "Llenguatge parlat, escrit o gestual característic dels éssers humans, com el francès, el japonès, el llenguatge de signes per a persones sordes o el braille. Per a indicar quin llenguatge s'està usant en un contingut es pot usar l'atribut `@lang` d'HTML ([[HTML40]](http://www.w3.org/2006/11/WCAG_ca/#ref-HTML40), secció 8.1) o l'atribut `@xml:lang` d'XML ([[XML]](http://www.w3.org/2006/11/WCAG_ca/#ref-XML), secció 2.12). "@ca ;
+  .
+
+wcag10:nav-mechanism
+  skos:prefLabel "Mecanisme de navegació"@ca ;
+  skos:definition "Mitjà que facilita a l'usuari la navegació per una pàgina o per un lloc web."@ca ;
+  skos:narrower wcag10:navbar ;
+  skos:narrower wcag10:sitemap ;
+  skos:narrower wcag10:table-of-contents ;
+  .
+
+wcag10:navbar
+  skos:prefLabel "Barra de navegació"@ca ;
+  skos:definition "Conjunt d'enllaços a les parts més importants del document o del lloc web."@ca ;
+  skos:broader wcag10:nav-mechanism ;
+  .
+
+wcag10:sitemap
+  skos:prefLabel "Mapa web"@ca ;
+  skos:definition "Esquema que dóna una visió global de l'organització de la pàgina o del lloc web."@ca ;
+  skos:broader wcag10:nav-mechanism ;
+  .
+
+wcag10:table-of-contents
+  skos:prefLabel "Sumari"@ca ;
+  skos:definition "Llista de les parts més importants del document que generalment inclou enllaços."@ca ;
+  skos:broader wcag10:nav-mechanism ;
+  .
+
+wcag10:pda
+  skos:prefLabel "Organitzador personal (PDA)"@ca ;
+  skos:definition "Dispositiu informàtic de butxaca que se sol usar com a agenda i per a enviar missatges de correu electrònic. Sol ser un dispositiu de mà amb una pantalla petita en què es poden introduir dades des de fonts diverses."@ca ;
+  .
+
+wcag10:screen-magnifier
+  skos:prefLabel "Ampliador de pantalla"@ca ;
+  skos:definition "Programa que augmenta una part de la pantalla per a poder-la veure més fàcilment. Les persones amb visió reduïda són les usuàries principals d'aquesta eina."@ca ;
+  .
+
+wcag10:screen-reader
+  skos:prefLabel "Lector de pantalla"@ca ;
+  skos:definition "Programa que llegeix en veu alta els continguts d'una pantalla. Les persones cegues són les principals usuàries d'aquestes eines. Els lectors de pantalla normalment només poden llegir el text que apareix en format de text, no d'imatge."@ca ;
+  .
+
+wcag10:style-sheets
+  skos:prefLabel "Fulls d'estil"@ca ;
+  skos:definition "Conjunt d'instruccions que especifica la presentació d'un document. Els fulls d'estil poden tenir tres orígens diferents: poden ser escrits pels creadors de contingut, creats pels usuaris o inserits en els agents d'usuari. En CSS ([[CSS2]](http://www.w3.org/2006/11/WCAG_ca/#ref-CSS2)), la interacció entre els tres tipus de fullls d'estil s'anomena fulls d'estil en cascada."@ca ;
+  skos:narrower wcag10:presentation-markup ;
+  .
+
+wcag10:presentation-markup
+  skos:prefLabel "Marcatge de presentació"@ca ;
+  skos:definition "El marcatge de presentació és el marcatge que busca un efecte estilístic (no estructural) tal com els elements `b` o `i` a HTML. Observeu que els elements `strong` i `em` no es consideren etiquetatge de presentació ja que aporten informació independent de l'estil de font en què es presentin."@ca ;
+  skos:broader wcag10:style-sheets ;
+  .
+
+wcag10:tabular-information
+  skos:prefLabel "Informació tabular"@ca ;
+  skos:definition "Informació que es presenta en taules. Quan aquestes s'usen per a presentar relacions lògiques de les dades —text, números, imatges, etc.—, les anomenem taules de dades. Les relacions entre els elements es poden mostrar a l'usuari gràficament (usualment en una graella bidimensional), oralment (precedint les cel·les amb informació que hi ha a les capçaleres) o en altres formats."@ca ;
+  .
+
+wcag10:until-user-agents
+  skos:prefLabel "Fins que els agents d'usuari …"@ca ;
+  skos:definition """
+    A la majoria de les directrius es demana als creadors de contingut que garanteixin l'accessibilitat de les seves pàgines i llocs web. Tot i així, hi ha algunes necessitats d'accessibilitat que seran resoltes més fàcilment pels [agents d'usuaris](http://www.w3.org/2006/11/WCAG_ca/#user-agent) (incloent-hi les [ajudes tècniques](http://www.w3.org/2006/11/WCAG_ca/#assistive-tech)). 
+    
+    En el moment de publicació d'aquest document, no tots els agents d'usuari ni les ajudes tècniques ofereixen el control d'accessibilitat que els usuaris necessiten (per exemple, alguns agents d'usuari no permeten deshabilitar el parpelleig de parts del document, o alguns lectors de pantalla no processen bé les taules). Les directrius que contenen la frase “fins que els agents d'usuari …” demanen als creadors de contingut que donin suport addicional a l'accessibilitat fins que la majoria d'agents d'usuari als quals la seva audiència té accés inclogui les característiques necessàries. 
+    
+    **Nota**: El lloc web W3C WAI (vegeu [[WAI-UA-SUPPORT]](http://www.w3.org/2006/11/WCAG_ca/#ref-WAI-UA-SUPPORT)) dóna informació sobre el suport a l'accessibilitat dels agents d'usuari. Animem els creadors de contingut que consultin regularment aquesta pàgina per estar al dia sobre el tema.
+  """@ca ;
+  .
+
+wcag10:user-agent
+  skos:prefLabel "Agent d'usuari"@ca ;
+  skos:definition "Programari per a accedir al contingut del web, incloent-hi els navegadors gràfics, els navegadors textuals, els navegadors de veu, els telèfons mòbils, les consoles multimèdia, els connectors, i altres ajudes tècniques que s'usen conjuntament amb els navegadors, com ara lectors de pantalla, ampliadors de pantalla o programes de reconeixement de la veu."@ca ;
+  .
+
+
