@@ -4,6 +4,25 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix wcag10: <http://www.w3.org/TR/WCAG10/#> .
 
+<http://www.w3.org/TR/WCAG10/>
+  dct:title "Directrius per a l'accessibilitat al contingut web, versió 1.0"@ca ;
+  dct:description """
+    Aquestes directrius expliquen com fer que el [contingut web](http://www.w3.org/2006/11/WCAG_ca/#content-structure) sigui accessible a persones amb discapacitats i s'adrecen a [creadors de contingut](http://www.w3.org/2006/11/WCAG_ca/#content-developer) (autors de pàgines web o dissenyadors de llocs web) i a creadors d'[eines d'autor](http://www.w3.org/2006/11/WCAG_ca/#authoring-tool). L'objectiu principal d'aquestes directrius és promoure l'accessibilitat. Tanmateix, l'aplicació de les directrius facilitarà l'accés al contingut a tot tipus d'usuari, sigui quin sigui l'[agent d'usuari](http://www.w3.org/2006/11/WCAG_ca/#user-agent) usat (navegador web, navegador de veu, telèfon mòbil, ordinador de cotxe, etc.) o les condicions de l'entorn de consulta (entorns sorollosos, espais mal il·luminats, entorns en què no es poden usar les mans, etc.). L'aplicació d'aquestes directrius també ajudarà els usuaris a trobar la informació d'una manera més ràpida dins el web. Les directrius no pretenen desincentivar l'ús d'imatges, vídeo, etc., sinó que expliquen com fer que el contingut multimèdia sigui més accessible a una àmplia audiència.
+    
+    Aquest és un document de referència per a uns principis d'accessibilitat i idees de disseny. Algunes de les estratègies comentades tracten d'aspectes relatius a la internacionalització del web i a l'accés des de terminals mòbils. Tanmateix, el document se centra en l'accessibilitat i no tracta exhaustivament dels aspectes relacionats amb altres activitats del W3C. Si voleu més informació sobre aquests temes podeu consultar les pàgines inicials [W3C Mobile Access Activity](http://www.w3.org/Mobile) (per a l'accés des de terminals mòbils) i [W3C Internationalization Activity](http://www.w3.org/International) (per als aspectes d'internacionalització).
+    
+    Aquest document està pensat per a ser estable en el temps i, per tant, no dóna informació específica sobre si els navegadors funcionen o no amb una determinada tecnologia, ja que aquesta informació varia molt ràpidament. Aquesta informació es pot trobar al web de la [Web Accessibility Initiative](http://www.w3.org/WAI/) ,WAI, (Iniciativa d'Accessibilitat Web) [[WAI-UA-SUPPORT]](http://www.w3.org/2006/11/WCAG_ca/#ref-WAI-UA-SUPPORT).
+    
+    Aquest document inclou un annex que organitza tots els punts de verificació ordenats per tema i per prioritat. Els punts de l'annex estan enllaçats a les respectives definicions en el document. Els temes recollits en l'annex inclouen les imatges, el contingut multimèdia, les taules, els marcs, els formularis i els scripts. L'annex es presenta en forma de [taula](http://www.w3.org/TR/WAI-WEBCONTENT/full-checklist.html) o com a simple [llista](http://www.w3.org/TR/1999/WAI-WEBCONTENT-19990505/checkpoint-list.html).
+    
+    Un document a part, amb el títol Techniques for Web Content Accessibility Guidelines 1.0 (Tècniques per a les directrius per a l'accessibilitat al contingut web, versió 1.0) ([[TECHNIQUES]](http://www.w3.org/2006/11/WCAG_ca/#ref-TECHNIQUES)) explica com posar a la pràctica els punts citats fins aquí. El document de tècniques explica cada punt amb més detalls i dóna exemples usant el llenguatge d'etiquetatge d'hipertext (HTML), fulls d'estil en cascada (CSS), el llenguatge d'integració multimèdia sincronitzada (SMIL) o el llenguatge d'etiquetatge matemàtic (MathML). Aquest document també inclou tècniques per a provar o validar una pàgina web i un índex dels elements i atributs HTML amb les tècniques que els usen. El document de tècniques està pensat per a seguir de prop els canvis tecnològics i es preveu que s'actualitzi més sovint que les directrius.
+    
+    **Nota**: Algunes de les característiques descrites en les directrius no estan encara implementades en tots els navegadors o eines multimèdia; en concret pot ser que no es puguin utilitzar funcions noves d'HTML 4.0, de CSS1 o CSS2.
+    
+    Les Directrius per a l'accessibilitat al contingut web, versió 1.0 són part d'una col·lecció de directrius sobre accessibilitat publicades per la [Web Accessibility Initiative](http://www.w3.org/WAI/), WAI (Iniciativa d'Accessibilitat Web). La col·lecció comprèn User Agent Accessibility Guidelines (Directrius d'accessibilitat per a agents d'usuari) [[WAI-USERAGENT]](http://www.w3.org/2006/11/WCAG_ca/#ref-WAI-USERAGENT) i Authoring Tool Accessibility Guidelines (Directrius d'accessibilitat per a eines d'autor [[WAI-AUTOOLS]](http://www.w3.org/2006/11/WCAG_ca/#ref-WAI-AUTOOLS).
+  """@ca ;
+  .
+
 wcag10:gl-provide-equivalents
   dct:title "Proporcioneu alternatives equivalents al contingut visual i auditiu"@ca ;
   dct:description "Proporcioneu un contingut que, presentat a l'usuari, compleixi essencialment la mateixa funció o el mateix propòsit que el contingut visual o auditiu."@ca ;
