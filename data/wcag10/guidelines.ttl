@@ -2,10 +2,42 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix earl: <http://www.w3.org/ns/earl#> .
 @prefix wcag: <http://www.w3.org/2001/03/earl/wcag#> .
 @prefix wcag10: <http://www.w3.org/TR/WCAG10/#> .
+
+<http://www.w3.org/TR/WCAG10/>
+  a foaf:Document, dctype:Text ;
+  foaf:primaryTopic <http://www.w3.org/TR/WCAG10/> ;
+  dct:title "Web Content Accessibility Guidelines 1.0"@en ;
+  dct:description """
+    These guidelines explain how to make [Web content](http://www.w3.org/TR/WCAG10/wai-pageauth.html#content-structure) accessible to people with disabilities. The guidelines are intended for all [Web content developers](http://www.w3.org/TR/WCAG10/wai-pageauth.html#content-developer) (page authors and site designers) and for developers of [authoring tools](http://www.w3.org/TR/WCAG10/wai-pageauth.html#authoring-tool). The primary goal of these guidelines is to promote accessibility. However, following them will also make Web content more available to all users, whatever [user agent](http://www.w3.org/TR/WCAG10/wai-pageauth.html#user-agent) they are using (e.g., desktop browser, voice browser, mobile phone, automobile-based personal computer, etc.) or constraints they may be operating under (e.g., noisy surroundings, under- or over-illuminated rooms, in a hands-free environment, etc.). Following these guidelines will also help people find information on the Web more quickly. These guidelines do not discourage content developers from using images, video, etc., but rather explain how to make multimedia content more accessible to a wide audience.
+    
+    This is a reference document for accessibility principles and design ideas. Some of the strategies discussed in this document address certain Web internationalization and mobile access concerns. However, this document focuses on accessibility and does not fully address the related concerns of other W3C Activities. Please consult the [W3C Mobile Access Activity home page](http://www.w3.org/Mobile) and the [W3C Internationalization Activity home page](http://www.w3.org/International) for more information.
+    
+    This document is meant to be stable and therefore does not provide specific information about browser support for different technologies as that information changes rapidly. Instead, the [Web Accessibility Initiative](http://www.w3.org/WAI/) (WAI) Web site provides such information (refer to [[WAI-UA-SUPPORT]](http://www.w3.org/TR/WCAG10/wai-pageauth.html#ref-WAI-UA-SUPPORT)).
+    
+    This document includes an appendix that organizes all of the [checkpoints](http://www.w3.org/TR/WCAG10/wai-pageauth.html#def-checkpoint) by topic and priority. The checkpoints in the appendix link to their definitions in the current document. The topics identified in the appendix include images, multimedia, tables, frames, forms, and scripts. The appendix is available as either a [tabular summary of checkpoints](http://www.w3.org/TR/WCAG10/full-checklist.html) or as a [simple list of checkpoints](http://www.w3.org/TR/WCAG10/checkpoint-list.html).
+    
+    A separate document, entitled "Techniques for Web Content Accessibility Guidelines 1.0" ([[TECHNIQUES]](http://www.w3.org/TR/WCAG10/wai-pageauth.html#ref-TECHNIQUES)), explains how to implement the checkpoints defined in the current document. The Techniques Document discusses each checkpoint in more detail and provides examples using the Hypertext Markup Language (HTML), Cascading Style Sheets (CSS), Synchronized Multimedia Integration Language (SMIL), and the Mathematical Markup Language (MathML). The Techniques Document also includes techniques for document validation and testing, and an index of HTML elements and attributes (and which techniques use them). The Techniques Document has been designed to track changes in technology and is expected to be updated more frequently than the current document. **Note**. Not all browsers or multimedia tools may support the features described in the guidelines. In particular, new features of HTML 4.0 or CSS 1 or CSS 2 may not be supported.
+    
+    "Web Content Accessibility Guidelines 1.0" is part of a series of accessibility guidelines published by the [Web Accessibility Initiative](http://www.w3.org/WAI/). The series also includes User Agent Accessibility Guidelines ([[WAI-USERAGENT]](http://www.w3.org/TR/WCAG10/wai-pageauth.html#ref-WAI-USERAGENT)) and Authoring Tool Accessibility Guidelines ([[WAI-AUTOOLS]](http://www.w3.org/TR/WCAG10/wai-pageauth.html#ref-WAI-AUTOOLS)).
+  """@en ;
+  dct:date "1999-05-05"^^xs:date ;
+  dct:creator "Wendy Chisholm" ;
+  dct:creator "Gregg Vanderheiden" ;
+  dct:creator "Ian Jacobs" ;
+  dct:publisher <http://www.w3c.org/> ;
+  dct:replaces <http://www.w3.org/TR/1999/WAI-WEBCONTENT-19990324> ;
+  dct:hasFormat <http://www.w3.org/TR/WAI-WEBCONTENT/wai-pageauth.txt> ;
+  dct:hasFormat <http://www.w3.org/TR/WAI-WEBCONTENT/wai-pageauth.ps> ;
+  dct:hasFormat <http://www.w3.org/TR/WAI-WEBCONTENT/wai-pageauth.pdf> ;
+  dct:hasFormat <http://www.w3.org/TR/WAI-WEBCONTENT/wai-pageauth.tgz> ;
+  dct:hasFormat <http://www.w3.org/TR/WAI-WEBCONTENT/wai-pageauth.zip> ;
+  dct:rights "Copyright © 1999 W3C (MIT, INRIA, Keio), All Rights Reserved. W3C liability, trademark, document use and software licensing rules apply." ;
+  .
 
 wcag10:gl-provide-equivalents
   a wcag:Guideline ;
