@@ -1,0 +1,187 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix wcag10: <http://www.w3.org/TR/WCAG10/#> .
+
+
+wcag10:accessible
+  a skos:Concept ;
+  rdfs:isDefinedBy <http://www.w3.org/TR/WCAG10/#> ;
+  skos:prefLabel "Accessible"@en ;
+  skos:definition "Content is accessible when it may be used by someone with a disability."@en ;
+  .
+
+wcag10:applet
+  a skos:Concept ;
+  rdfs:isDefinedBy <http://www.w3.org/TR/WCAG10/#> ;
+  skos:prefLabel "Applet"@en ;
+  skos:definition "A program inserted into a Web page."@en ;
+  .
+
+wcag10:assistive-tech
+  a skos:Concept ;
+  rdfs:isDefinedBy <http://www.w3.org/TR/WCAG10/#> ;
+  skos:prefLabel "Assistive technology"@en ;
+  skos:definition "Software or hardware that has been specifically designed to assist people with disabilities in carrying out daily activities. Assistive technology includes wheelchairs, reading machines, devices for grasping, etc. In the area of Web Accessibility, common software-based assistive technologies include screen readers, screen magnifiers, speech synthesizers, and voice input software that operate in conjunction with graphical desktop browsers (among other [user agents](http://www.w3.org/TR/WCAG10/#user-agent)). Hardware assistive technologies include alternative keyboards and pointing devices."@en ;
+  .
+
+wcag10:ascii-art
+  a skos:Concept ;
+  rdfs:isDefinedBy <http://www.w3.org/TR/WCAG10/#> ;
+  skos:prefLabel "ASCII art"@en ;
+  skos:definition """
+    ASCII art refers to text characters and symbols that are combined to create an image. For example ";-)" is the smiley emoticon. The following is an ascii figure showing the relationship between flash frequency and photoconvulsive response in patients with eyes open and closed [[skip over ascii figure](http://www.w3.org/TR/WCAG10/#authoring-tool) or consult a [description of chart](http://www.w3.org/TR/WCAG10/images/ascii-chart-longdesc.html)]:
+    
+      %   __ __ __ __ __ __ __ __ __ __ __ __ __ __   
+    100 |             *                             |
+     90 |                *  *                       |
+     80 |          *           *                    |
+     70 |             @           *                 |
+     60 |          @                 *              |
+     50 |       *        @              *           |
+     40 |                   @              *        |
+     30 |    *  @              @  @           *     |
+     20 |                                           |
+     10 |    @                       @  @  @  @     |
+          0  5 10 15 20 25 30 35 40 45 50 55 60 65 70
+          Flash frequency (Hertz)
+  """@en ;
+  .
+
+wcag10:authoring-tool
+  a skos:Concept ;
+  rdfs:isDefinedBy <http://www.w3.org/TR/WCAG10/#> ;
+  skos:prefLabel "Authoring tool"@en ;
+  skos:definition "HTML editors, document conversion tools, tools that generate Web content from databases are all authoring tools. Refer to the “Authoring Tool Accessibility Guidelines” ([[WAI-AUTOOLS]](http://www.w3.org/TR/WCAG10/#ref-WAI-AUTOOLS)) for information about developing accessible tools."@en ;
+  .
+
+wcag10:backward-compatible
+  a skos:Concept ;
+  rdfs:isDefinedBy <http://www.w3.org/TR/WCAG10/#> ;
+  skos:prefLabel "Backward compatible"@en ;
+  skos:definition "Design that continues to work with earlier versions of a language, program, etc."@en ;
+  .
+
+wcag10:braille
+  a skos:Concept ;
+  rdfs:isDefinedBy <http://www.w3.org/TR/WCAG10/#> ;
+  skos:prefLabel "Braille"@en ;
+  skos:definition """
+    Braille uses six raised dots in different patterns to represent letters and numbers to be read by people who are blind with their fingertips. The word “Accessible” in braille follows:
+    
+    ![Accessible](http://www.w3.org/TR/WCAG10/images/access.gif)
+    
+    A braille display, commonly referred to as a “dynamic braille display,” raises or lowers dot patterns on command from an electronic device, usually a computer. The result is a line of braille that can change from moment to moment. Current dynamic braille displays range in size from one cell (six or eight dots) to an eighty-cell line, most having between twelve and twenty cells per line.
+  """@en ;
+  .
+
+wcag10:content-developer
+  a skos:Concept ;
+  rdfs:isDefinedBy <http://www.w3.org/TR/WCAG10/#> ;
+  skos:prefLabel "Content developer"@en ;
+  skos:definition "Someone who authors Web pages or designs Web sites."@en ;
+  .
+
+wcag10:deprecated
+  a skos:Concept ;
+  rdfs:isDefinedBy <http://www.w3.org/TR/WCAG10/#> ;
+  skos:prefLabel "Content developer"@en ;
+  skos:definition """
+    A deprecated element or attribute is one that has been outdated by newer constructs. Deprecated elements may become obsolete in future versions of HTML. [The index of HTML elements and attributes in the Techniques Document](http://www.w3.org/TR/WAI-WEBCONTENT-TECHS#html-index) indicates which elements and attributes are deprecated in HTML 4.0.
+    
+    Authors should avoid using deprecated elements and attributes. User agents should continue to support for reasons of backward compatibility.
+  """@en ;
+  .
+
+wcag10:device-independent
+  a skos:Concept ;
+  rdfs:isDefinedBy <http://www.w3.org/TR/WCAG10/#> ;
+  skos:prefLabel "Device independent"@en ;
+  skos:definition """
+    Users must be able to interact with a user agent (and the document it renders) using the supported input and output devices of their choice and according to their needs. Input devices may include pointing devices, keyboards, braille devices, head wands, microphones, and others. Output devices may include monitors, speech synthesizers, and braille devices.
+    
+    Please note that "device-independent support" does not mean that user agents must support every input or output device. User agents should offer redundant input and output mechanisms for those devices that are supported. For example, if a user agent supports keyboard and mouse input, users should be able to interact with all features using either the keyboard or the mouse.
+  """@en ;
+  .
+
+wcag10:content-structure
+  a skos:Concept ;
+  rdfs:isDefinedBy <http://www.w3.org/TR/WCAG10/#> ;
+  skos:prefLabel "Document Content, Structure, and Presentation"@en ;
+  skos:definition """
+    The content of a document refers to what it says to the user through natural language, images, sounds, movies, animations, etc. The structure of a document is how it is organized logically (e.g., by chapter, with an introduction and table of contents, etc.). An [element](http://www.w3.org/TR/WCAG10/#element) (e.g., `p`, `strong`, `blockquote` in HTML) that specifies document structure is called a structural element. The presentation of a document is how the document is rendered (e.g., as print, as a two-dimensional graphical presentation, as an text-only presentation, as synthesized speech, as braille, etc.) An element that specifies document presentation (e.g., `b`, `font`, `center`) is called a presentation element.
+    
+    Consider a document header, for example. The content of the header is what the header says (e.g., “Sailboats”). In HTML, the header is a structural element marked up with, for example, an `h2` element. Finally, the presentation of the header might be a bold block text in the margin, a centered line of text, a title spoken with a certain voice style (like an aural font), etc.
+  """@en ;
+  .
+
+wcag10:dhtml
+  a skos:Concept ;
+  rdfs:isDefinedBy <http://www.w3.org/TR/WCAG10/#> ;
+  skos:prefLabel "Dynamic HTML (DHTML)"@en ;
+  skos:definition "DHTML is the marketing term applied to a mixture of standards including HTML, [style sheets](http://www.w3.org/TR/WCAG10/#style-sheet), the Document Object Model [[DOM1]](http://www.w3.org/TR/WCAG10/#ref-DOM1) and scripting. However, there is no W3C specification that formally defines DHTML. Most guidelines may be applicable to applications using DHTML, however the following guidelines focus on issues related to scripting and style sheets: [guideline 1](http://www.w3.org/TR/WCAG10/#gl-provide-equivalents), [guideline 3](http://www.w3.org/TR/WCAG10/#gl-structure-presentation), [guideline 6](http://www.w3.org/TR/WCAG10/#gl-new-technologies), [guideline 7](http://www.w3.org/TR/WCAG10/#gl-movement), and [guideline 9](http://www.w3.org/TR/WCAG10/#gl-device-independence)."@en ;
+  .
+
+wcag10:element
+  a skos:Concept ;
+  rdfs:isDefinedBy <http://www.w3.org/TR/WCAG10/#> ;
+  skos:prefLabel "Element"@en ;
+  skos:definition """
+    This document uses the term “element” both in the strict SGML sense (an element is a syntactic construct) and more generally to mean a type of content (such as video or sound) or a logical construct (such as a header or list). The second sense emphasizes that a guideline inspired by HTML could easily apply to another markup language.
+    
+    Note that some (SGML) elements have content that is rendered (e.g., the `p`, `li`, or `table` elements in HTML), some are replaced by external content (e.g., `img`), and some affect processing (e.g., `style` and `script` cause information to be processed by a style sheet or script engine). An element that causes text characters to be part of the document is called a text element.
+  """@en ;
+  .
+
+
+# Equivalent
+#     Content is "equivalent" to other content when both fulfill essentially the same function or purpose upon presentation to the user. In the context of this document, the equivalent must fulfill essentially the same function for the person with a disability (at least insofar as is feasible, given the nature of the disability and the state of technology), as the primary content does for the person without any disability. For example, the text "The Full Moon" might convey the same information as an image of a full moon when presented to users. Note that equivalent information focuses on fulfilling the same function. If the image is part of a link and understanding the image is crucial to guessing the link target, an equivalent must also give users an idea of the link target. Providing equivalent information for inaccessible content is one of the primary ways authors can make their documents accessible to people with disabilities. 
+#     As part of fulfilling the same function of content an equivalent may involve a description of that content (i.e., what the content looks like or sounds like). For example, in order for users to understand the information conveyed by a complex chart, authors should describe the visual information in the chart. 
+#     Since text content can be presented to the user as synthesized speech, braille, and visually-displayed text, these guidelines require text equivalents for graphic and audio information. Text equivalents must be written so that they convey all essential content. Non-text equivalents (e.g., an auditory description of a visual presentation, a video of a person telling a story using sign language as an equivalent for a written story, etc.) also improve accessibility for people who cannot access visual information or written text, including many individuals with blindness, cognitive disabilities, learning disabilities, and deafness. 
+#     Equivalent information may be provided in a number of ways, including through attributes (e.g., a text value for the "alt" attribute in HTML and SMIL), as part of element content (e.g., the OBJECT in HTML), as part of the document's prose, or via a linked document (e.g., designated by the "longdesc" attribute in HTML or a description link). Depending on the complexity of the equivalent, it may be necessary to combine techniques (e.g., use "alt" for an abbreviated equivalent, useful to familiar readers, in addition to "longdesc" for a link to more complete information, useful to first-time readers). The details of how and when to provide equivalent information are part of the Techniques Document ([TECHNIQUES]). 
+#     A text transcript is a text equivalent of audio information that includes spoken words and non-spoken sounds such as sound effects. A caption is a text transcript for the audio track of a video presentation that is synchronized with the video and audio tracks. Captions are generally rendered visually by being superimposed over the video, which benefits people who are deaf and hard-of-hearing, and anyone who cannot hear the audio (e.g., when in a crowded room). A collated text transcript combines (collates) captions with text descriptions of video information (descriptions of the actions, body language, graphics, and scene changes of the video track). These text equivalents make presentations accessible to people who are deaf-blind and to people who cannot play movies, animations, etc. It also makes the information available to search engines. 
+#     One example of a non-text equivalent is an auditory description of the key visual elements of a presentation. The description is either a prerecorded human voice or a synthesized voice (recorded or generated on the fly). The auditory description is synchronized with the audio track of the presentation, usually during natural pauses in the audio track. Auditory descriptions include information about actions, body language, graphics, and scene changes. 
+# Image
+#     A graphical presentation.
+# Image map
+#     An image that has been divided into regions with associated actions. Clicking on an active region causes an action to occur.
+#     When a user clicks on an active region of a client-side image map, the user agent calculates in which region the click occurred and follows the link associated with that region. Clicking on an active region of a server-side image map causes the coordinates of the click to be sent to a server, which then performs some action. 
+#     Content developers can make client-side image maps accessible by providing device-independent access to the same links associated with the image map's regions. Client-side image maps allow the user agent to provide immediate feedback as to whether or not the user's pointer is over an active region. 
+# Important
+#     Information in a document is important if understanding that information is crucial to understanding the document.
+# Linearized table
+#     A table rendering process where the contents of the cells become a series of paragraphs (e.g., down the page) one after another. The paragraphs will occur in the same order as the cells are defined in the document source. Cells should make sense when read in order and should include structural elements (that create paragraphs, headers, lists, etc.) so the page makes sense after linearization. 
+# Link text
+#     The rendered text content of a link. 
+# Natural Language
+#     Spoken, written, or signed human languages such as French, Japanese, American Sign Language, and braille. The natural language of content may be indicated with the "lang" attribute in HTML ([HTML40], section 8.1) and the "xml:lang" attribute in XML ([XML], section 2.12). 
+# Navigation Mechanism
+#     A navigation mechanism is any means by which a user can navigate a page or site. Some typical mechanisms include:
+# 
+#     navigation bars
+#         A navigation bar is a collection of links to the most important parts of a document or site. 
+#     site maps
+#         A site map provides a global view of the organization of a page or site. 
+#     tables of contents
+#         A table of contents generally lists (and links to) the most important sections of a document. 
+# 
+# Personal Digital Assistant (PDA)
+#     A PDA is a small, portable computing device. Most PDAs are used to track personal data such as calendars, contacts, and electronic mail. A PDA is generally a handheld device with a small screen that allows input from various sources.
+# Screen magnifier
+#     A software program that magnifies a portion of the screen, so that it can be more easily viewed. Screen magnifiers are used primarily by individuals with low vision.
+# Screen reader
+#     A software program that reads the contents of the screen aloud to a user. Screen readers are used primarily by individuals who are blind. Screen readers can usually only read text that is printed, not painted, to the screen.
+# Style sheets
+#     A style sheet is a set of statements that specify presentation of a document. Style sheets may have three different origins: they may be written by content providers, created by users, or built into user agents. In CSS ([CSS2]), the interaction of content provider, user, and user agent style sheets is called the cascade. 
+#     Presentation markup is markup that achieves a stylistic (rather than structuring) effect such as the B or I elements in HTML. Note that the STRONG and EM elements are not considered presentation markup since they convey information that is independent of a particular font style. 
+# Tabular information
+#     When tables are used to represent logical relationships among data -- text, numbers, images, etc., that information is called "tabular information" and the tables are called "data tables". The relationships expressed by a table may be rendered visually (usually on a two-dimensional grid), aurally (often preceding cells with header information), or in other formats. 
+# Until user agents ...
+#     In most of the checkpoints, content developers are asked to ensure the accessibility of their pages and sites. However, there are accessibility needs that would be more appropriately met by user agents (including assistive technologies). As of the publication of this document, not all user agents or assistive technologies provide the accessibility control users require (e.g., some user agents may not allow users to turn off blinking content, or some screen readers may not handle tables well). Checkpoints that contain the phrase "until user agents ..." require content developers to provide additional support for accessibility until most user agents readily available to their audience include the necessary accessibility features.
+#     Note. The W3C WAI Web site (refer to [WAI-UA-SUPPORT]) provides information about user agent support for accessibility features. Content developers are encouraged to consult this page regularly for updated information. 
+# User agent
+#     Software to access Web content, including desktop graphical browsers, text browsers, voice browsers, mobile phones, multimedia players, plug-ins, and some software assistive technologies used in conjunction with browsers such as screen readers, screen magnifiers, and voice recognition software.
+# 
